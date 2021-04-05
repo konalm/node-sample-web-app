@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h4> Automated deployments with Kubernetes. First deployment success?</h4>
+    <h4> Automated deployments with Kubernetes. Second deployment success?</h4>
     <p> message from api: {{ apiMessage }} </p>
   </div>
 </template>
