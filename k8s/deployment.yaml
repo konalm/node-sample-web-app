@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-web-app
+  namespace: default
+  labels:
+    app: sample-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-web-app
+  template:
+    metadata:
+      labels:
+        app: sample-web-app
+    spec:
+      containers:
+        - name: sample-web-app
+          image: creed93/sample-web-app:1.0
+          ports:
+            - containerPort: 8080
+              name: http
+      imagePullSecrets:
+        - name: regcred              
