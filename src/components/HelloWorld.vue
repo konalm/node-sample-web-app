@@ -8,7 +8,7 @@
 
 <script>
 import http from '../services/httpService';
-import config from '../config.json';
+import config from '../../config';
 
 export default {
   name: 'HelloWorld',
@@ -23,17 +23,14 @@ export default {
   },
 
   created() {
-    this.getApiMessage();
+    this.uploadApiMessage();
   },
 
   methods: {
-    getApiMessage() {
-      console.log('get api message ()');
-
+    uploadApiMessage() {
       http.get(config.apiEndpoint)
         .then((res) => {
-          console.log('api response --->')
-          console.log(res);
+          this.apiMessage = res.data;
         })
     }
   }

@@ -12,6 +12,11 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+
+  beforeMount() {
+    console.log('App Mounted');
+    console.log(window.location.hostname);
   }
 }
 </script>
