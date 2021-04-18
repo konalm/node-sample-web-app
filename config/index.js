@@ -2,7 +2,7 @@ import dev from './dev.json';
 import prod from './prod.json';
 
 const devHost = 'localhost';
-const prodHost = 'prototype.api.stelita.app';
+const prodHost = 'prototype.stelita.app';
 
 const envConfig = () => {
     const host = window.location.hostname;
